@@ -6,9 +6,9 @@ app.use(cors());
 app.use(express.json());
 
 app.post('/login', (req, res) => {
-  const { usuario, contraseña } = req.body;
+  const { usuario, contrasena } = req.body;
 
-  if (usuario === 'admin' && contraseña === '1234') {
+  if (usuario === 'admin' && contrasena === '1234') {
     return res.json({ acceso: true, mensaje: "Login exitoso" });
   } else {
     return res.status(401).json({ acceso: false, mensaje: "Credenciales incorrectas" });
